@@ -4927,11 +4927,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4664476244919388390}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9a8f61b58835d242b31a7cbff6fe4cb, type: 3}
+  m_Script: {fileID: 11500000, guid: ac9382fcb34f830488dc2ed2a989b71b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 40
-  _power: 5
+  _power: 0
 --- !u!50 &1335541329498260778
 Rigidbody2D:
   serializedVersion: 4

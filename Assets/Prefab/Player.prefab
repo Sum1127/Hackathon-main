@@ -185,7 +185,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e2e087f872795454cb171d989d8b1159, type: 2}
+  - {fileID: 2100000, guid: 30ecda23556eaf74e9aa08d695733d73, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -437,7 +437,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &7836492818012301606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,7 +536,7 @@ MonoBehaviour:
   _trailRenderer:
   - {fileID: 8595045381111172666}
   - {fileID: 1898945894616854201}
-  _bulletWeapon: {fileID: 4664476244919388390, guid: c41fec1417e205b4f9c3580f959348d1, type: 3}
+  _bulletWeapon: {fileID: 4664476244919388390, guid: 52f79c998af63714e8d933cad5ce7a59, type: 3}
 --- !u!1 &4153365880753797768
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,7 +622,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e2e087f872795454cb171d989d8b1159, type: 2}
+  - {fileID: 2100000, guid: 30ecda23556eaf74e9aa08d695733d73, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
