@@ -24,7 +24,7 @@ public class Enemy10 : MonoBehaviour
         transform.position += direction * speed * Time.deltaTime;
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         // ぶつかったオブジェクトの表面法線を取得
         Vector3 normal = collision.contacts[0].normal;
