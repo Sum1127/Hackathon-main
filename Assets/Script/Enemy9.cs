@@ -10,11 +10,13 @@ public class Enemy9 : MonoBehaviour
     public float phaseShift = Mathf.PI/2;  // 半波長のシフト
 
     private Vector3 startPosition;  // オブジェクトの初期位置を保存
+    private float lifetime = 8f; // オブジェクトの寿命
 
     void Start()
     {
         // オブジェクトの初期位置を保存
         startPosition = transform.position;
+        Destroy(gameObject, lifetime);
     }
 
     void Update()

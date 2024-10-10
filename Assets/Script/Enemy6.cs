@@ -9,11 +9,13 @@ public class Enemy6 : MonoBehaviour
     public float verticalFrequency = 5f;  // 上下移動の速度（周波数）
 
     private Vector3 startPosition;  // オブジェクトの初期位置を保存
+    private float lifetime = 8f; // オブジェクトの寿命
 
     void Start()
     {
         // オブジェクトの初期位置を保存
         startPosition = transform.position;
+        Destroy(gameObject, lifetime);
     }
 
     void Update()
