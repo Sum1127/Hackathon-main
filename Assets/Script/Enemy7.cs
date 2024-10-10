@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class Enemy7 : MonoBehaviour
 {
@@ -38,6 +39,8 @@ public class Enemy7 : MonoBehaviour
                 StartCoroutine(StartFlashing());
             }
         }
+
+
     }
 
     IEnumerator StartFlashing()

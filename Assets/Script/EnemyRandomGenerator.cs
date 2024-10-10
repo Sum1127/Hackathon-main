@@ -19,7 +19,7 @@ public class EnemyRandomGenerator : MonoBehaviour
     void Update()
     {
         ++frame;
-        if (maxObjects < 150)
+        if (maxObjects < 1000)
         {
             if (frame > generateFrame)
             {
@@ -31,8 +31,7 @@ public class EnemyRandomGenerator : MonoBehaviour
                 float posY = Random.Range(3,5);
                 Vector3 enemyPosition = Camera.main.ViewportToWorldPoint(new Vector3(-3f+posX, -3f+posY, Camera.main.nearClipPlane));
                 enemyPosition.z = 0;
-
-                Instantiate(enemyList[index], enemyPosition , Quaternion.identity);
+                Instantiate(enemyList[index],enemyPosition , Quaternion.identity);
                 ++maxObjects;
             }
         }
