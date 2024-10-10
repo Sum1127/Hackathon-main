@@ -6,6 +6,8 @@ public class Enemy4 : MonoBehaviour
 {
     Transform playerTr; // プレイヤーのTransform
     [SerializeField] float speed = 4; // 敵の動くスピード
+    [SerializeField] GameObject Player;
+    public float time = 0;
 
     private void Start()
     {
@@ -15,6 +17,13 @@ public class Enemy4 : MonoBehaviour
 
     private void Update()
     {
+        time = Time.deltaTime;
+        if (time > 3)
+        {
+            Vector2 pos = Player.transform.position;
+
+            time = 0;
+        }
 
         // プレイヤーとの距離が0.1f未満になったらそれ以上実行しない
         if (Vector2.Distance(transform.position, playerTr.position) < 15f)
