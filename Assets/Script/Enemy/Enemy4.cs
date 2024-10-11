@@ -9,6 +9,7 @@ public class Enemy4 : MonoBehaviour
     [SerializeField] GameObject Player;
     public float time = 0;
     [SerializeField] int _power;
+    [SerializeField] GameObject Attacktype;
     private void Start()
     {
         // プレイヤーのTransformを取得（プレイヤーのタグをPlayerに設定必要）
@@ -17,11 +18,11 @@ public class Enemy4 : MonoBehaviour
 
     private void Update()
     {
-        time = Time.deltaTime;
+        time += Time.deltaTime;
         if (time > 3)
         {
-            Vector2 pos = Player.transform.position;
-
+            Vector2 pos = playerTr.position;
+            Instantiate(Attacktype, this.transform.position, Quaternion.identity);
             time = 0;
         }
 
