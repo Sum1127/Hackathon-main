@@ -7,10 +7,15 @@ public class EnemyHP : MonoBehaviour
     public int maxHp = 100;    // 最大HP
     private int currentHp;     // 現在のHP
 
+    private GameObject _LevelManager;
+    private LevelManager _levelManager;
+
     // HPを初期化するメソッド
     void Start()
     {
         InitHP(maxHp);
+        _LevelManager = FindObjectOfType<LevelManager>().gameObject;
+        _levelManager = _LevelManager.GetComponent<LevelManager>();
     }
     
     public void InitHP(int hp)
@@ -23,8 +28,7 @@ public class EnemyHP : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHp -= damage;  // HPを減らす
-        Debug.Log(gameObject.name + " は " + damage + " のダメージを受けた。残りHP: " + currentHp);
-
+        //Debug.Log(gameObject.name + " は " + damage + " のダメージを受けた。残りHP: " + currentHp);
         // HPが0以下になったら倒される
         if (currentHp <= 0)
         {
@@ -35,8 +39,9 @@ public class EnemyHP : MonoBehaviour
     // 倒されたときの処理
     void Die()
     {
-        Debug.Log(gameObject.name + " は倒された。");
+        //Debug.Log(gameObject.name + " は倒された。");
         // オブジェクトを消滅させる
+        _levelManager._DefeatEnemy();
         Destroy(gameObject);  // オブジェクトを消滅
     }
 }
