@@ -5,7 +5,8 @@ using UnityEngine;
 public class EnemyRandomGenerator : MonoBehaviour
 {
     [SerializeField] List<GameObject> enemyList;    // 生成オブジェクト
-    float minX, maxX, minY, maxY;   
+    float minX, maxX, minY, maxY;
+    [SerializeField] float SpawnTime;
     //int frame = 0;                // 生成範囲
     //[SerializeField] int generateFrame = 30;    // 生成する間隔
     public int maxObjects = 0;//最大生成数
@@ -27,7 +28,7 @@ public class EnemyRandomGenerator : MonoBehaviour
         //++frame;
         if (maxObjects < 1000)
         {
-            if (time > 3f)
+            if (time > SpawnTime)
             {
                 //frame = 0;
 
