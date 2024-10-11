@@ -23,7 +23,7 @@ public class PlayerHP : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHp -= damage;  // HPを減らす
-        Debug.Log(gameObject.name + " は " + damage + " のダメージを受けた。残りHP: " + currentHp);
+        //Debug.Log(gameObject.name + " は " + damage + " のダメージを受けた。残りHP: " + currentHp);
 
         // HPが0以下になったら倒される
         if (currentHp == 0)

@@ -24,8 +24,11 @@ public class Player : MonoBehaviour
 
     [SerializeField] private GameObject _bulletWeapon;
 
+    [SerializeField] private GameObject _bomb;
+
     private bool _bShot;
     private bool _bRecastShot;
+    private bool _bRecastBomb;
 
     // Start is called before the first frame update
     void Start()
@@ -130,6 +133,20 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
         _bRecastShot=false;
 
+    }
+
+    public void _OnSetBomb(InputAction.CallbackContext context)
+    {
+        if (!context.started||_bRecastBomb) return;
+        StartCoroutine(_SetBomb());
+    }
+
+    private IEnumerator _SetBomb()
+    {
+        _bRecastBomb = true;
+        Instantiate(_bomb, transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(3.0f);
+        _bRecastBomb = false;
     }
 
 }
