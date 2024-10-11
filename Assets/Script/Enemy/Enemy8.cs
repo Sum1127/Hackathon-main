@@ -11,6 +11,7 @@ public class Enemy8 : MonoBehaviour
 
     private Vector3 startPosition;  // オブジェクトの初期位置を保存
     private float lifetime = 8f; // オブジェクトの寿命
+    [SerializeField] int _power;
 
     void Start()
     {
@@ -30,4 +31,12 @@ public class Enemy8 : MonoBehaviour
         // 上下移動を加味した新しい位置を設定
         transform.position = new Vector3(transform.position.x, startPosition.y + verticalOffset, transform.position.z);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerHP>().TakeDamage(_power);
+        }
+    }
+
 }

@@ -7,6 +7,7 @@ public class Enemy3 : MonoBehaviour
     Transform playerTr; // プレイヤーのTransform
     [SerializeField] float speed = 2; // 敵の動くスピード
     private bool isMoving = true;
+    [SerializeField] int _power;
 
     private void Start()
     {
@@ -36,6 +37,14 @@ public class Enemy3 : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f);//0.5秒待つ
             isMoving = !isMoving;  // 状態を反転させる
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerHP>().TakeDamage(_power);
         }
     }
 
