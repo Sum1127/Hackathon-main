@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour,IBullet
 {
     [SerializeField] private float _speed;
-    [SerializeField] private float _power;
+    [SerializeField] private int _power;
 
     private Vector3 _shotDir;
     private Rigidbody2D _rigidbody2D;
@@ -32,5 +32,13 @@ public class Bullet : MonoBehaviour,IBullet
     {
         yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<EnemyHP>().TakeDamage(_power);
+        }
     }
 }

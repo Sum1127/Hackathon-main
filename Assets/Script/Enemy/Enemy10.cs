@@ -8,10 +8,12 @@ public class Enemy10 : MonoBehaviour
     public float speed = 30f; // 移動速度
     private Vector3 direction; // オブジェクトの進行方向
     private float lifetime = 15f; // オブジェクトの寿命
+    [SerializeField] int _power;
 
     void Start()
     {
         // 斜め方向に初期移動方向を設定 (例: 45度の斜め右上)
+
         direction = new Vector3(1, 1, 0).normalized;
 
         // 15秒後にオブジェクトを削除
@@ -34,5 +36,12 @@ public class Enemy10 : MonoBehaviour
 
         // 移動方向を反射後の方向に更新
         transform.position += direction * speed * Time.deltaTime;
+
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerHP>().TakeDamage(_power);
+        }
+
     }
+
 }

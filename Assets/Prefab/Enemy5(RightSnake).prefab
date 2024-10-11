@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2592625641517050488}
   - component: {fileID: 6459408793583466350}
   - component: {fileID: 9026917551207209685}
+  - component: {fileID: 2909573582709741325}
   m_Layer: 10
   m_Name: Enemy5(RightSnake)
   m_TagString: Enemy
@@ -174,3 +175,17 @@ MonoBehaviour:
   horizontalSpeed: 8
   verticalAmplitude: 10
   verticalFrequency: 5
+  _power: 1
+--- !u!114 &2909573582709741325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3416503010484499638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5552d68ec2ac14995e0dece046a245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100

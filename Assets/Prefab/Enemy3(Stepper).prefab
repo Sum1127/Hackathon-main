@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4888654699029947210}
   - component: {fileID: 7537000349397177069}
   - component: {fileID: 7861005415022263069}
+  - component: {fileID: 455330065612732217}
   m_Layer: 10
   m_Name: Enemy3(Stepper)
   m_TagString: Enemy
@@ -100,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  _power: 1
 --- !u!61 &7537000349397177069
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -172,3 +174,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &455330065612732217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8958188754906512624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5552d68ec2ac14995e0dece046a245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100

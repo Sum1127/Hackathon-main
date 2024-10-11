@@ -8,7 +8,7 @@ public class Enemy4 : MonoBehaviour
     [SerializeField] float speed = 4; // 敵の動くスピード
     [SerializeField] GameObject Player;
     public float time = 0;
-
+    [SerializeField] int _power;
     private void Start()
     {
         // プレイヤーのTransformを取得（プレイヤーのタグをPlayerに設定必要）
@@ -35,4 +35,13 @@ public class Enemy4 : MonoBehaviour
             new Vector2(playerTr.position.x, playerTr.position.y),
             speed * Time.deltaTime);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerHP>().TakeDamage(_power);
+        }
+    }
+
 }

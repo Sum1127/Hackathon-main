@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3082618387038553247}
   - component: {fileID: 2353432082793613811}
   - component: {fileID: 3959583024421099573}
+  - component: {fileID: 4334970388284357024}
   m_Layer: 0
   m_Name: sword
   m_TagString: Untagged
@@ -132,6 +133,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4334970388284357024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744059037651623160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84621a8fd62dc224aadecd0cfe8f8a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _power: 100
 --- !u!1 &1580138389004082726
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,6 +305,7 @@ GameObject:
   - component: {fileID: 6035248134393684853}
   - component: {fileID: 7836492818012301606}
   - component: {fileID: 1227858581413210048}
+  - component: {fileID: 6076073581767258800}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -537,6 +552,19 @@ MonoBehaviour:
   - {fileID: 8595045381111172666}
   - {fileID: 1898945894616854201}
   _bulletWeapon: {fileID: 4664476244919388390, guid: 52f79c998af63714e8d933cad5ce7a59, type: 3}
+--- !u!114 &6076073581767258800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2702883209160263176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb1a2df77c5aff4dad32c885a51fabd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 500
 --- !u!1 &4153365880753797768
 GameObject:
   m_ObjectHideFlags: 0

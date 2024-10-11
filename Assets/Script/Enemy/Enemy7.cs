@@ -7,6 +7,7 @@ public class Enemy7 : MonoBehaviour
 {
     Transform playerTr; // プレイヤーのTransform
     [SerializeField] float speed = 30; // 敵の動くスピード
+    [SerializeField] int _power;
     private bool isMoving = true;
     public float flashSpeed = 0.2f;        // 点滅速度（秒）
     public float flashDuration = 2f;       // 点滅する時間
@@ -63,4 +64,13 @@ public class Enemy7 : MonoBehaviour
         // オブジェクトを消滅させる
         Destroy(deleteObject);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerHP>().TakeDamage(_power);
+        }
+    }
+
 }

@@ -6,6 +6,7 @@ public class Enemy1 : MonoBehaviour
 {
     Transform playerTr; // プレイヤーのTransform
     [SerializeField] float speed = 2; // 敵の動くスピード
+    [SerializeField] int _power;
 
     private void Start()
     {
@@ -26,4 +27,13 @@ public class Enemy1 : MonoBehaviour
             new Vector2(playerTr.position.x, playerTr.position.y),
             speed * Time.deltaTime);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerHP>().TakeDamage(_power);
+        }
+    }
+
 }

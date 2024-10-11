@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHP : MonoBehaviour
+public class PlayerHP : MonoBehaviour
 {
-    public int maxHp = 100;    // 最大HP
+    public int maxHp = 500;    // 最大HP
     private int currentHp;     // 現在のHP
 
     // HPを初期化するメソッド
@@ -12,7 +12,7 @@ public class EnemyHP : MonoBehaviour
     {
         InitHP(maxHp);
     }
-    
+
     public void InitHP(int hp)
     {
         maxHp = hp;
@@ -26,7 +26,7 @@ public class EnemyHP : MonoBehaviour
         Debug.Log(gameObject.name + " は " + damage + " のダメージを受けた。残りHP: " + currentHp);
 
         // HPが0以下になったら倒される
-        if (currentHp <= 0)
+        if (currentHp == 0)
         {
             Die();
         }
@@ -36,7 +36,6 @@ public class EnemyHP : MonoBehaviour
     void Die()
     {
         Debug.Log(gameObject.name + " は倒された。");
-        // オブジェクトを消滅させる
-        Destroy(gameObject);  // オブジェクトを消滅
+        // オブジェクトを消滅させる  // オブジェクトを消滅
     }
 }
