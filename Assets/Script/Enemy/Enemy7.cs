@@ -46,7 +46,6 @@ public class Enemy7 : MonoBehaviour
 
     IEnumerator StartFlashing()
     {
-        isFlashing = true;
         isMoving = false;
         GameObject deleteObject = gameObject;
         float FlashEndTime = Time.time + flashDuration;
