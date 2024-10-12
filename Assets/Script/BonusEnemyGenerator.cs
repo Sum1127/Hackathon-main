@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyRandomGenerator : MonoBehaviour
+public class BonusEnemyGenerator : MonoBehaviour
 {
     [SerializeField] List<GameObject> enemyList;    // 生成オブジェクト
     float minX, maxX, minY, maxY;
@@ -24,19 +24,19 @@ public class EnemyRandomGenerator : MonoBehaviour
     {
         startTime += Time.deltaTime;
         time += Time.deltaTime;
-        minX = Camera.main.ViewportToWorldPoint(Vector2.zero).x - 3f;
-        maxX = Camera.main.ViewportToWorldPoint(Vector2.one).x + 3f;
-        minY = Camera.main.ViewportToWorldPoint(Vector2.zero).y - 3f;
-        maxY = Camera.main.ViewportToWorldPoint(Vector2.one).y + 3f;
+        minX = Camera.main.ViewportToWorldPoint(Vector2.zero).x + 3f;
+        maxX = Camera.main.ViewportToWorldPoint(Vector2.one).x - 3f;
+        minY = Camera.main.ViewportToWorldPoint(Vector2.zero).y + 3f;
+        maxY = Camera.main.ViewportToWorldPoint(Vector2.one).y - 3f;
         //++frame;
-        if (startTime>SpawnStarttime)
+        if (startTime > SpawnStarttime)
         {
             if (time > SpawnTime)
             {
                 //frame = 0;
 
                 // ランダムで種類と位置を決める
-                for (int i = 0; i < 20; i++)
+                for (int i = 0; i < 1; i++)
                 {
                     int index = Random.Range(0, enemyList.Count);
                     float posX = Random.Range(minX, maxX);
@@ -53,7 +53,7 @@ public class EnemyRandomGenerator : MonoBehaviour
                     Instantiate(enemyList[index], enemyPosition3, Quaternion.identity);
                     Instantiate(enemyList[index], enemyPosition4, Quaternion.identity);
                 }
-                time = 0;            
+                time = 0;
             }
         }
     }
