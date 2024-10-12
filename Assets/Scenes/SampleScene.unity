@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7251677059861909063, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_text
+      value: "KnockOut:\nTime:\nLv.\uFF1A\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 7364086449948031759, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
