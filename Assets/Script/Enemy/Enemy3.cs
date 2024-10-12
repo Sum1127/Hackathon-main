@@ -5,15 +5,21 @@ using UnityEngine;
 public class Enemy3 : MonoBehaviour
 {
     Transform playerTr; // プレイヤーのTransform
+    Transform enemy3Tr; //enemy3のTransform
     [SerializeField] float speed = 2; // 敵の動くスピード
     private bool isMoving = true;
     [SerializeField] int _power;
+    private float hidari;
+    private float migi;
 
     private void Start()
     {
         // プレイヤーのTransformを取得（プレイヤーのタグをPlayerに設定必要）
         playerTr = GameObject.FindGameObjectWithTag("Player").transform;
+        enemy3Tr = transform;
         StartCoroutine(ToggleMovementRoutine());
+        hidari = transform.localScale.x;
+        migi = transform.localScale.x * -1;
     }
 
     private void Update()
@@ -28,7 +34,20 @@ public class Enemy3 : MonoBehaviour
                 transform.position,
                 new Vector2(playerTr.position.x, playerTr.position.y),
                 speed * Time.deltaTime);
-        }  
+        }
+
+        //アニメーションの向きを変える
+        Vector3 localScale = transform.localScale;
+        if (playerTr.position.x - enemy3Tr.position.x < 0)
+        {
+            localScale.x = hidari;
+        }
+
+        else if (playerTr.position.x - enemy3Tr.position.x > 0)
+        {
+            localScale.x = migi;
+        }
+        transform.localScale = localScale;
     }
 
     IEnumerator ToggleMovementRoutine()
