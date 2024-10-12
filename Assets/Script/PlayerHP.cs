@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerHP : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class PlayerHP : MonoBehaviour
         //Debug.Log(gameObject.name + " は " + damage + " のダメージを受けた。残りHP: " + currentHp);
 
         // HPが0以下になったら倒される
-        if (currentHp == 0)
+        if (currentHp <= 0)
         {
             Die();
         }
@@ -35,7 +36,10 @@ public class PlayerHP : MonoBehaviour
     // 倒されたときの処理
     void Die()
     {
+
         Debug.Log(gameObject.name + " は倒された。");
+        GetComponent<PlayerInput>().enabled = false;
+        FindObjectOfType<GameManager>()._ShowGameOverUI();
         // オブジェクトを消滅させる  // オブジェクトを消滅
     }
 }

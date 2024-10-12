@@ -10,8 +10,8 @@ public class LevelManager : MonoBehaviour
 
     private int _enemyAmount;
 
-    private GameObject _ClearUI;
-    private LevelClear _levelClear;
+    [SerializeField] private GameObject _ClearUI;
+    [SerializeField] private GameObject _levelClear;
     
 
     private void Awake()
@@ -19,9 +19,7 @@ public class LevelManager : MonoBehaviour
         _targetAmount = 20;
         _enemyAmount = 20;
         _level = 1;
-        _ClearUI = GameObject.Find("ClearUI");
-        _levelClear = FindObjectOfType<LevelClear>();
-        _ClearUI.SetActive(false);
+
     }
 
     // Start is called before the first frame update
@@ -40,7 +38,7 @@ public class LevelManager : MonoBehaviour
             //Debug.Log("ƒŒƒxƒ‹" + _level+"ƒNƒŠƒA!!");
 
             StartCoroutine(_DisplayClear());
-
+            _level++;
             _targetAmount += 20;          
             _enemyAmount = _targetAmount;
             //Debug.Log(_targetAmount);
@@ -57,10 +55,15 @@ public class LevelManager : MonoBehaviour
     IEnumerator _DisplayClear()
     {
         _ClearUI.SetActive(true);
-        _levelClear._DisplayLevelClear(_level);
+        _levelClear.GetComponent<LevelClear>()._DisplayLevelClear();
         yield return new WaitForSeconds(0.15f);
         _ClearUI.SetActive(false);
-        _level++;
+        
+    }
+
+    public int _GetLevel()
+    {
+        return _level;
     }
 
 
