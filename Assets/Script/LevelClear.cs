@@ -19,9 +19,9 @@ public class LevelClear : MonoBehaviour
         
     }
 
-    public void _DisplayLevelClear(int level)
+    public void _DisplayLevelClear()
     {
-        _textMeshPro.text = "  Level  " + level + "  Cleared!!  ";
+        _textMeshPro.text = "  Level  UP !! " ;
     }
 
 }

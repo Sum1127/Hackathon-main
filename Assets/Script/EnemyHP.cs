@@ -9,6 +9,7 @@ public class EnemyHP : MonoBehaviour
 
     private GameObject _LevelManager;
     private LevelManager _levelManager;
+    private GameManager _gameManager;
 
     // HPを初期化するメソッド
     void Start()
@@ -16,6 +17,7 @@ public class EnemyHP : MonoBehaviour
         InitHP(maxHp);
         _LevelManager = FindObjectOfType<LevelManager>().gameObject;
         _levelManager = _LevelManager.GetComponent<LevelManager>();
+        _gameManager = FindObjectOfType<GameManager>();
     }
     
     public void InitHP(int hp)
@@ -41,6 +43,7 @@ public class EnemyHP : MonoBehaviour
     {
         //Debug.Log(gameObject.name + " は倒された。");
         // オブジェクトを消滅させる
+        _gameManager._AddKnockOutAmount();
         _levelManager._DefeatEnemy();
         Destroy(gameObject);  // オブジェクトを消滅
     }
