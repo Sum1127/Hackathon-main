@@ -28,6 +28,12 @@ public class Player : MonoBehaviour
     private bool _bShot;
     private bool _bRecastShot;
     private bool _bRecastBomb;
+    public AudioClip Orbsound;
+    public AudioClip Swordsound;
+    public AudioClip Bulletsound;
+    public AudioClip Bombsound;
+    AudioSource audioSource;
+    private float time=0;
 
     // Start is called before the first frame update
     void Start()
@@ -35,14 +41,20 @@ public class Player : MonoBehaviour
        _meleeWeapon=transform.GetChild(0).gameObject;
        _bShot = false;
        _bRecastShot = false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
         _Move();
         if (_bShot&&!_bRecastShot) StartCoroutine(_Shot());
-
+        if(time>=3)
+        {
+            audioSource.PlayOneShot(Orbsound);
+            time = 0;
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -78,13 +90,17 @@ public class Player : MonoBehaviour
         float angle = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg)+180.0f; // ƒ‰ƒWƒAƒ“‚©‚ç“x‚É•ÏŠ·
 
         _meleeWeapon.SetActive(true);
-        StartCoroutine(_Attack(angle));      
+        StartCoroutine(_Attack(angle));
+        if (Input.GetMouseButtonDown(0))
+        {
+            audioSource.PlayOneShot(Swordsound);
+        }
     }
 
     public void _OnShot(InputAction.CallbackContext context)
     {
         if (context.started) _bShot = true;
-        else if (context.canceled) _bShot = false;   
+        else if (context.canceled) _bShot = false;
     }
 
     private IEnumerator _Attack(float Angle)
@@ -131,6 +147,7 @@ public class Player : MonoBehaviour
 
         yield return new WaitForSeconds(0.05f);
         _bRecastShot=false;
+        audioSource.PlayOneShot(Bulletsound);
 
     }
 
@@ -146,6 +163,10 @@ public class Player : MonoBehaviour
         Instantiate(_bomb, transform.position, Quaternion.identity);
         yield return new WaitForSeconds(3.0f);
         _bRecastBomb = false;
+        if (Input.GetKey(KeyCode.E))
+        {
+            audioSource.PlayOneShot(Bombsound);
+        }
     }
 
 }
