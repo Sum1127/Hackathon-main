@@ -7,6 +7,7 @@ public class Bomb : MonoBehaviour
 
    
     [SerializeField] private ParticleSystem _effect;
+    [SerializeField] private AudioSource ExplodeSE;
 
     // Start is called before the first frame update
     void Start()
