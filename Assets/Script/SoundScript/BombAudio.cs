@@ -4,11 +4,20 @@ using UnityEngine;
 
 public class BombAudio : MonoBehaviour
 {
-    public GameObject Audio_Object;
-
-    void OnCollisionEnter2D(Collision2D collision)
+    private AudioSource Audio;//AudioSourceを入れる
+    bool isAudioPlay = false; //再生中かどうかの判定
+    void Start()
     {
-        Instantiate(Audio_Object, transform.position, transform.rotation);
-        Destroy(gameObject);
+        Audio = GetComponent<AudioSource>();//AudioSourceの取得
+        Audio.Play();//AudioSourceを再生
+        isAudioPlay = true;//効果音の再生を判定
+    }
+    void Update()
+    {
+        if (!Audio.isPlaying && isAudioPlay)
+        //曲が再生されていない時、効果音が再生されている時
+        {
+            Destroy(gameObject);//オブジェクトを消す
+        }
     }
 }

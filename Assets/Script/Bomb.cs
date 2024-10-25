@@ -7,7 +7,7 @@ public class Bomb : MonoBehaviour
 
    
     [SerializeField] private ParticleSystem _effect;
-    [SerializeField] private AudioSource ExplodeSE;
+    public GameObject Audio_Obj;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +25,7 @@ public class Bomb : MonoBehaviour
     {
         yield return new WaitForSeconds(2.0f);
         Instantiate(_effect,transform.position,_effect.transform.rotation);
+        Instantiate(Audio_Obj, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 
@@ -33,6 +34,7 @@ public class Bomb : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             Instantiate(_effect, transform.position, _effect.transform.rotation);
+            Instantiate(Audio_Obj, transform.position, transform.rotation);
             Destroy(gameObject);
         }
     }
