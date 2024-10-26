@@ -2157,6 +2157,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 1000000
       objectReference: {fileID: 0}
+    - target: {fileID: 6076073581767258800, guid: 2b6b41ae866e28e4b912f8a6ce5cf627, type: 3}
+      propertyPath: maxHp
+      value: 100000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

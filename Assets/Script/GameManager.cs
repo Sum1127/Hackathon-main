@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         _time += Time.deltaTime;
+        if (_time >= 180.0f)
+        {
+            SceneManager.LoadScene("Score");
+        }
     }
 
     public void _ShowGameOverUI()
