@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 7190789945155125730}
   - component: {fileID: 5455932671256658789}
   - component: {fileID: 2397842037858283130}
+  - component: {fileID: 8215581014777638135}
   m_Layer: 5
   m_Name: Power UP  Select3
   m_TagString: Untagged
@@ -254,7 +255,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5455932671256658789}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8215581014777638135}
+        m_TargetAssemblyTypeName: PowerUPBottun, Assembly-CSharp
+        m_MethodName: _PowerUP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8215581014777638135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761091988160968198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f24f862a9f351498f198b4d34d3f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttonIndex: 2
 --- !u!1 &1008745680368307347
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 145}
+  m_AnchoredPosition: {x: 0, y: 120}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4978002000052999170
@@ -728,6 +754,7 @@ GameObject:
   - component: {fileID: 215790231373045248}
   - component: {fileID: 5185433318904716603}
   - component: {fileID: 3811100146581830310}
+  - component: {fileID: 1350998117873295326}
   m_Layer: 5
   m_Name: Power UP  Select2
   m_TagString: Untagged
@@ -836,7 +863,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5185433318904716603}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1350998117873295326}
+        m_TargetAssemblyTypeName: PowerUPBottun, Assembly-CSharp
+        m_MethodName: _PowerUP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1350998117873295326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4437718508630543808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f24f862a9f351498f198b4d34d3f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttonIndex: 1
 --- !u!1 &5064386949263705995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,6 +1170,7 @@ GameObject:
   - component: {fileID: 4897475255228264500}
   - component: {fileID: 6155713852501179400}
   - component: {fileID: 1502182890562368798}
+  - component: {fileID: 5097536856655593509}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1205,7 +1258,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.69411767, g: 0.69411767, b: 0.69411767, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1252,6 +1305,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneName: title
+--- !u!114 &5097536856655593509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5954042687457767863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &6029528276601853895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,6 +1642,7 @@ GameObject:
   - component: {fileID: 736952643185289691}
   - component: {fileID: 2388539252803293780}
   - component: {fileID: 4935823288697450116}
+  - component: {fileID: 6777360629331669618}
   m_Layer: 5
   m_Name: Power UP  Select1
   m_TagString: Untagged
@@ -1682,7 +1751,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2388539252803293780}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6777360629331669618}
+        m_TargetAssemblyTypeName: PowerUPBottun, Assembly-CSharp
+        m_MethodName: _PowerUP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6777360629331669618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7748629948882261925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f24f862a9f351498f198b4d34d3f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttonIndex: 0
 --- !u!1 &8026236576342092385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,10 +1918,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u6483\u7834\u6570:\nTime:\n\u30D7\u30EC\u30A4\u30E4\u30FC\u30EC\u30D9\u30EB\uFF1A\n"
+  m_text: 'KnockOut:
+
+    Time:
+
+    Lv.
+
+'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d7780e3456859a42a59e6fc7ed47349, type: 2}
-  m_sharedMaterial: {fileID: 808218754352935637, guid: 5d7780e3456859a42a59e6fc7ed47349, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1917,6 +2017,7 @@ GameObject:
   - component: {fileID: 1119316561003664337}
   - component: {fileID: 7411259997275649157}
   - component: {fileID: 4075007588862870100}
+  - component: {fileID: 927028682018342612}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2040,6 +2141,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &927028682018342612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437868995827797874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &8676559214179859232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2077,7 +2193,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -210}
+  m_AnchoredPosition: {x: 0, y: -150}
   m_SizeDelta: {x: 200, y: 55.9084}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &133522381954509510
@@ -2199,6 +2315,7 @@ GameObject:
   - component: {fileID: 5785741872073358554}
   - component: {fileID: 2967514007202891568}
   - component: {fileID: 5889686020442380090}
+  - component: {fileID: 1077300462985876675}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2333,6 +2450,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneName: SampleScene
+--- !u!114 &1077300462985876675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8750671702429657979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &9161012021414756303
 GameObject:
   m_ObjectHideFlags: 0
