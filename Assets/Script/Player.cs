@@ -159,14 +159,11 @@ public class Player : MonoBehaviour
 
     private IEnumerator _SetBomb()
     {
+        audioSource.PlayOneShot(Bombsound);
         _bRecastBomb = true;
         Instantiate(_bomb, transform.position, Quaternion.identity);
         yield return new WaitForSeconds(3.0f);
         _bRecastBomb = false;
-        if (Input.GetKey(KeyCode.E))
-        {
-            audioSource.PlayOneShot(Bombsound);
-        }
     }
 
 }
