@@ -139,6 +139,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4055813006641205342, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720385564215088940, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720385564215088940, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720385564215088940, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 414977402}
+    - target: {fileID: 5720385564215088940, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720385564215088940, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TestTimeScale, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6155713852501179400, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
       value: 0.69411767
@@ -257,6 +281,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8026236576342092385, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9167272567408308601, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -265,6 +293,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8676559214179859232, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 414977408}
     - targetCorrespondingSourceObject: {fileID: 5954042687457767863, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 49239449}
@@ -488,6 +519,23 @@ MonoBehaviour:
   time: 0
   startTime: 0
   SpawnStarttime: 150
+--- !u!1 &414977402 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8676559214179859232, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+  m_PrefabInstance: {fileID: 49239447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &414977408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414977402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c1fcaa5ef3a20418f9ead2313c6781, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &503105873 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2659277036974613031, guid: d2d1641094e0ab84ea119282ca5b8980, type: 3}
@@ -2159,7 +2207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6076073581767258800, guid: 2b6b41ae866e28e4b912f8a6ce5cf627, type: 3}
       propertyPath: maxHp
-      value: 100000
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

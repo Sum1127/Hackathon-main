@@ -10,6 +10,7 @@ public class result : MonoBehaviour
     public int _knockOutAmount;
     public TextMeshProUGUI score_text;
     public float score_num;//ÉXÉRÉAïœêî
+    public int continue_count;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class result : MonoBehaviour
     void Update()
     {
         Debug.Log(_time);
-        score_num = _time + _knockOutAmount;
-        score_text.text = "ClearTime : " + _time + "\nknockOut : " + _knockOutAmount + "\nScore : " + score_num;
+        score_num = _time + _knockOutAmount * continue_count;
+        score_text.text = "ClearTime : " + _time + "\nKnockOut : " + _knockOutAmount  + "\nContinue : " + continue_count + "\nScore : " + score_num ;
     }
 }
