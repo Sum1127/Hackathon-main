@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour,IBullet
 {
-    [SerializeField] private float _speed;
-    [SerializeField] private int _power;
+    private float _speed;
+    private int _power;
 
     private Vector3 _shotDir;
     private Rigidbody2D _rigidbody2D;
@@ -41,5 +41,15 @@ public class Bullet : MonoBehaviour,IBullet
             collision.gameObject.GetComponent<EnemyHP>().TakeDamage(_power);
             Destroy(gameObject);
         }
+    }
+
+    public void _SetSpeed(int _para)
+    {
+        _speed = _para;
+    }
+
+    public void _SetPower(int _para)
+    {
+        _power = _para;
     }
 }

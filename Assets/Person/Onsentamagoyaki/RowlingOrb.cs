@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RowlingOrb : MonoBehaviour
 {
-    [SerializeField] private float _rotateSpeed;
+    public float _rotateSpeed;
     // Start is called before the first frame update
     void Start()
     {

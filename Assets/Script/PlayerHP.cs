@@ -42,4 +42,15 @@ public class PlayerHP : MonoBehaviour
         FindObjectOfType<GameManager>()._ShowGameOverUI();
         // オブジェクトを消滅させる  // オブジェクトを消滅
     }
+
+    public void _SetMaxHP(int para)
+    {
+        maxHp += para;
+    }
+
+    public void _SetHP(int para)
+    {
+        currentHp += para;
+        if(currentHp>=maxHp)currentHp = maxHp;
+    }
 }

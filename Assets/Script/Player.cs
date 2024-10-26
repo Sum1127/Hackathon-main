@@ -6,8 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float _moveSpeed;
-
+    public float _moveSpeed;
     [SerializeField] private float _playerMinPosx;
     [SerializeField] private float _playerMaxPosx;
     [SerializeField] private float _playerMinPosy;
@@ -35,13 +34,34 @@ public class Player : MonoBehaviour
     AudioSource audioSource;
     private float time=0;
 
+
+    public int _bulletPow = 100;
+    public int _bombPow=200;
+    public int _bulletSpeed = 40;
+    public float _bombScale = 3.0f;
+
+
+    private Orb[] _orbs;
+    private RowlingOrb[] _orbAxis;
+    private GameObject _sword;
+  
+
     // Start is called before the first frame update
     void Start()
     {
        _meleeWeapon=transform.GetChild(0).gameObject;
        _bShot = false;
        _bRecastShot = false;
-        audioSource = GetComponent<AudioSource>();
+       audioSource = GetComponent<AudioSource>();
+       _orbs = GetComponentsInChildren<Orb>();
+       _orbAxis =GetComponentsInChildren<RowlingOrb>();
+       _sword = GetComponentInChildren<Sword>().gameObject;
+       _meleeWeapon.SetActive(false);
+    }
+
+    private void Awake()
+    {
+        
     }
 
     // Update is called once per frame
@@ -64,15 +84,18 @@ public class Player : MonoBehaviour
 
     public void _Move()
     {
+
         transform.Translate(_movedir * _moveSpeed * Time.deltaTime);
         float _currentPosx = transform.position.x;
         float _currentPosy = transform.position.y;
         Vector3 _playerPos = new Vector3(Mathf.Clamp(_currentPosx, _playerMinPosx, _playerMaxPosx), Mathf.Clamp(_currentPosy, _playerMinPosy, _playerMaxPosy), transform.position.z);
         transform.position = _playerPos;
+
     }
 
     public void _OnAttack(InputAction.CallbackContext context)
     {
+
         if (!context.started) return;
 
         if (_meleeWeapon.activeSelf)return;
@@ -91,10 +114,12 @@ public class Player : MonoBehaviour
 
         _meleeWeapon.SetActive(true);
         StartCoroutine(_Attack(angle));
+
         if (Input.GetMouseButtonDown(0))
         {
             audioSource.PlayOneShot(Swordsound);
         }
+
     }
 
     public void _OnShot(InputAction.CallbackContext context)
@@ -144,6 +169,8 @@ public class Player : MonoBehaviour
 
         GameObject shot = Instantiate(_bulletWeapon, transform.position, _bulletWeapon.transform.rotation);
         shot.GetComponent<IBullet>()._SetShotDir(_shotDir);
+        shot.GetComponent<Bullet>()._SetPower(_bulletPow);
+        shot.GetComponent<Bullet>()._SetSpeed(_bulletSpeed);
 
         yield return new WaitForSeconds(0.05f);
         _bRecastShot=false;
@@ -161,9 +188,42 @@ public class Player : MonoBehaviour
     {
         audioSource.PlayOneShot(Bombsound);
         _bRecastBomb = true;
-        Instantiate(_bomb, transform.position, Quaternion.identity);
+        var bomb = Instantiate(_bomb, transform.position, Quaternion.identity)as GameObject;
+        bomb.transform.GetChild(0).gameObject.GetComponent<ExplodeArea>()._SetPower(_bombPow);
+        bomb.transform.localScale = _bombScale*Vector3.one;
         yield return new WaitForSeconds(3.0f);
         _bRecastBomb = false;
     }
+
+    public void _SetOrbPower(int _para)
+    {
+        foreach (var orb in _orbs)
+        {
+            orb._power += _para;
+        }
+    }
+
+    public void _SetOrbSpeed(float _para)
+    {
+        foreach (var orb in _orbAxis)
+        {
+            orb._rotateSpeed += _para;
+        }
+    }
+
+    public void _SetSwordPower(int _para)
+    {
+        _sword.GetComponent<Sword>()._power += _para;            
+    }
+
+    public void _SetSwordScale(float _para)
+    {
+
+        _sword.transform.localScale +=  new Vector3(0.0f , _para,0.0f);
+        _sword.transform.position += new Vector3(0.0f, _para / 2, 0.0f);
+
+    }
+
+
 
 }
