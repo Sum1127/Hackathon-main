@@ -53,4 +53,8 @@ public class PlayerHP : MonoBehaviour
         currentHp += para;
         if(currentHp>=maxHp)currentHp = maxHp;
     }
+    public int GetCurrentHP()
+    {
+        return currentHp;
+    }
 }
