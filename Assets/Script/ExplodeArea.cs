@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class ExplodeArea : MonoBehaviour
 {
-    [SerializeField] private int _power;
+    private int _power;
 
+
+    
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,4 +17,11 @@ public class ExplodeArea : MonoBehaviour
             
         }
     }
+
+    public void _SetPower(int _para)
+    {
+        _power = _para;
+    }
+
+
 }

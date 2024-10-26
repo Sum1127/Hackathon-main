@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class Orb : MonoBehaviour
 {
-    [SerializeField] private int _power;
+
+    public int _power;
 
     // Start is called before the first frame update
+
     void Start()
     {
         
     }
+
 
     // Update is called once per frame
     void Update()
     {
         
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,4 +29,5 @@ public class Orb : MonoBehaviour
             collision.gameObject.GetComponent<EnemyHP>().TakeDamage(_power);         
         }
     }
+
 }

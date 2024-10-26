@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
-    [SerializeField] private int _power;
+    public int _power;
 
     // Start is called before the first frame update
     void Start()

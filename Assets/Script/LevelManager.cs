@@ -12,6 +12,8 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private GameObject _ClearUI;
     [SerializeField] private GameObject _levelClear;
+
+    private GameObject _powerUPManager;
     
 
     private void Awake()
@@ -25,7 +27,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _powerUPManager = GameObject.Find("PowerUPManager");
     }
 
 
@@ -36,13 +38,12 @@ public class LevelManager : MonoBehaviour
         if (_enemyAmount <= 0)
         {
             //Debug.Log("ƒŒƒxƒ‹" + _level+"ƒNƒŠƒA!!");
-
             StartCoroutine(_DisplayClear());
             _level++;
             _targetAmount += 20;          
             _enemyAmount = _targetAmount;
             //Debug.Log(_targetAmount);
-            Time.timeScale = 0.0f;
+           
         }
     }
 
@@ -56,7 +57,9 @@ public class LevelManager : MonoBehaviour
     {
         _ClearUI.SetActive(true);
         _levelClear.GetComponent<LevelClear>()._DisplayLevelClear();
-        yield return new WaitForSeconds(0.15f);
+        _powerUPManager.GetComponent<PowerUP>()._ChangePowerUPtext();
+        Time.timeScale = 0.0f;
+        yield return new WaitForFixedUpdate();
         _ClearUI.SetActive(false);
         
     }
