@@ -131,9 +131,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1682064712598340468, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -120
+      objectReference: {fileID: 0}
+    - target: {fileID: 3414717140545619332, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 81
+      objectReference: {fileID: 0}
     - target: {fileID: 4055813006641205342, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553030931824726775, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6553030931824726775, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 91
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256587405336259890, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7272128604347262718, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7364086449948031759, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
       propertyPath: m_Pivot.x
@@ -215,6 +239,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8676559214179859232, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 414977408}
   m_SourcePrefab: {fileID: 100100000, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
 --- !u!1 &142416115
 GameObject:
@@ -2072,7 +2103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6076073581767258800, guid: 2b6b41ae866e28e4b912f8a6ce5cf627, type: 3}
       propertyPath: maxHp
-      value: 1000
+      value: 600
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
