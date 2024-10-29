@@ -11,7 +11,6 @@ public class Enemy7 : MonoBehaviour
     private bool isMoving = true;
     public float flashSpeed = 0.2f;        // 点滅速度（秒）
     public float flashDuration = 2f;       // 点滅する時間
-    private bool isFlashing = false;       // 点滅中かどうか
     private Renderer objRenderer;
 
     private void Start()
