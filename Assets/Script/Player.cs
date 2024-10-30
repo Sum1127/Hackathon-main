@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float _playerMaxPosy;
 
     private Vector2 _movedir;
+    private Vector2 _aimDir;
 
     private Rigidbody2D _rigidbody2D;
 
@@ -100,25 +101,35 @@ public class Player : MonoBehaviour
 
         if (_meleeWeapon.activeSelf)return;
 
-        Vector3 _clickPos = Mouse.current.position.ReadValue();
-        _clickPos = Camera.main.ScreenToWorldPoint(_clickPos);
-        _clickPos.z = 0.0f; 
+        Vector2 _shotDir;
 
-        Vector3 direction = _clickPos - transform.position;
+        if (_aimDir == Vector2.zero)
+        {
+            Vector3 _clickPos = Mouse.current.position.ReadValue();
+            _clickPos = Camera.main.ScreenToWorldPoint(_clickPos);
+            _clickPos.z = 0.0f;
 
-        Vector2 _shotDir = new Vector2(direction.x, direction.y);
-        _shotDir.Normalize();
+            Vector3 direction = _clickPos - transform.position;
+
+            _shotDir = new Vector2(direction.x, direction.y);
+            _shotDir.Normalize();
+        }
+        else
+        {
+            _shotDir = _aimDir;
+            _shotDir.Normalize();
+        }
 
         // 角度を計算
-        float angle = (Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg)+180.0f; // ラジアンから度に変換
+        float angle = (Mathf.Atan2(_shotDir.y, _shotDir.x) * Mathf.Rad2Deg)+180.0f; // ラジアンから度に変換
 
         _meleeWeapon.SetActive(true);
+        audioSource.PlayOneShot(Swordsound);
         StartCoroutine(_Attack(angle));
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            audioSource.PlayOneShot(Swordsound);
-        }
+        
+        
+        
 
     }
 
@@ -156,16 +167,24 @@ public class Player : MonoBehaviour
 
     private IEnumerator _Shot()
     {
+        Vector2 _shotDir;
+
         _bRecastShot = true;
+        if (_aimDir == Vector2.zero)
+        {
+            Vector3 _clickPos = Mouse.current.position.ReadValue();
+            _clickPos = Camera.main.ScreenToWorldPoint(_clickPos);
+            _clickPos.z = 0.0f;
 
-        Vector3 _clickPos = Mouse.current.position.ReadValue();
-        _clickPos = Camera.main.ScreenToWorldPoint(_clickPos);
-        _clickPos.z = 0.0f;
+            Vector3 direction = _clickPos - transform.position;
 
-        Vector3 direction = _clickPos - transform.position;
-
-        Vector2 _shotDir = new Vector2(direction.x, direction.y);
-        _shotDir.Normalize();
+            _shotDir = new Vector2(direction.x, direction.y);
+            _shotDir.Normalize();
+        }
+        else
+        {
+            _shotDir = _aimDir;
+        }
 
         GameObject shot = Instantiate(_bulletWeapon, transform.position, _bulletWeapon.transform.rotation);
         shot.GetComponent<IBullet>()._SetShotDir(_shotDir);
@@ -222,6 +241,11 @@ public class Player : MonoBehaviour
         _sword.transform.localScale +=  new Vector3(0.0f , _para,0.0f);
         _sword.transform.position += new Vector3(0.0f, _para / 2, 0.0f);
 
+    }
+
+    public void _OnAim(InputAction.CallbackContext context)
+    {
+        _aimDir = context.ReadValue<Vector2>();
     }
 
 
