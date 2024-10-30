@@ -30,6 +30,7 @@ public class TestTimeScale : MonoBehaviour
     {
         // 次のシーンの中にあるオブジェクトを取得
         // そのオブジェクトに付加されているスクリプトを取得
+        if (GameObject.Find("clearscore") == null) return;
         var result = GameObject.Find("clearscore").GetComponent<result>();
 
         result.continue_count = continue_count;
