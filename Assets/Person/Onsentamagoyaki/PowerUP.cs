@@ -53,35 +53,35 @@ public class PowerUP : MonoBehaviour
         switch (PowerUPindex)
         {
             case 0:
-                _powerUPtext[ButtonIndex].text = "Player \nHeal HP";
+                _powerUPtext[ButtonIndex].text = "\nHP回復";
                 break;
 
             case 1:
-                _powerUPtext[ButtonIndex].text = "Player \nAdd MaxHP";
+                _powerUPtext[ButtonIndex].text = "\n最大HP増加";
                 break;
 
             case 2:
-                _powerUPtext[ButtonIndex].text = "Sword \n Power UP";
+                _powerUPtext[ButtonIndex].text = "剣　\n 攻撃力UP";
                 break;
 
             case 3:
-                _powerUPtext[ButtonIndex].text = "Bullet \n Power UP";
+                _powerUPtext[ButtonIndex].text = "銃　\n 攻撃力UP";
                 break;
 
             case 4:
-                _powerUPtext[ButtonIndex].text = "Orb \n Power UP";
+                _powerUPtext[ButtonIndex].text = "オーブ　\n 攻撃力UP";
                 break;
 
             case 5:
-                _powerUPtext[ButtonIndex].text = "Orb \n Speed UP";
+                _powerUPtext[ButtonIndex].text = "オーブ　\n 速度UP";
                 break;
 
             case 6:
-                _powerUPtext[ButtonIndex].text = "Bomb \n Scale UP";
+                _powerUPtext[ButtonIndex].text = "ボム　\n 範囲UP";
                 break;
 
             case 7:
-                _powerUPtext[ButtonIndex].text = "Player \n Speed UP";
+                _powerUPtext[ButtonIndex].text = "移動速度増加";
                 break;
 
 

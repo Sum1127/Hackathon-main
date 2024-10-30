@@ -32,7 +32,7 @@ public class ScoreText : MonoBehaviour
         float miliseconds = _time - Mathf.Floor(_time);
         int milisecondsInt = Mathf.RoundToInt(miliseconds * 100);
 
-        _textMeshPro.text = "KnockOut:" + _knockOutAmount + "\nTime " + minutes + ":" + seconds.ToString("00") + ":" + milisecondsInt + "\nPlayer Lv." + _level ;
+        _textMeshPro.text = "“G‚ğ“|‚µ‚½”:" + _knockOutAmount + "\nŒo‰ßŠÔ : 3:00:00/ " + minutes + ":" + seconds.ToString("00") + ":" + milisecondsInt + "\nƒŒƒxƒ‹." + _level ;
     }
 
     void KeepScore(Scene next, LoadSceneMode mode)

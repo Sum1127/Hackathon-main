@@ -43,7 +43,7 @@ public class rankingsave : MonoBehaviour
         for(int i=0;i<10;i++)
         {
             rank = (i+1).ToString();
-            text.text += "No." + rank + " " + Name[i] + ":" + Score[i] + "\n";
+            text.text +=  rank + "ˆÊ" + " " + Name[i] + ":" + Score[i] + "\n";
         }
 
     }

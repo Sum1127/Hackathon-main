@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 1.0f;
-        _time = 0.0f;
+        _time = 120.0f;
         _knockOutAmount = 0;
     }
     void Start()

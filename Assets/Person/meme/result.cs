@@ -25,7 +25,7 @@ public class result : MonoBehaviour
     void Update()
     {
         score_num = _time + _knockOutAmount * continue_count;
-        score_text.text = "ClearTime : " + _time + "\nKnockOut : " + _knockOutAmount  + "\nContinue : " + continue_count + "\nScore : " + score_num + "\nRegistration:";
+        score_text.text = "クリアタイム : " + _time + "\n倒した敵の数 : " + _knockOutAmount  + "\nスコアボーナス : " + continue_count + "\nスコア : " + score_num + "\nランキング登録名:";
     }
     
     public void RankingUpdate()
