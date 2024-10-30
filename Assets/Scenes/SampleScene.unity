@@ -159,6 +159,22 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2967514007202891568, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967514007202891568, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.7686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967514007202891568, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.8941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967514007202891568, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.94117653
+      objectReference: {fileID: 0}
     - target: {fileID: 3943487943683443226, guid: 37eb0d2d989a2544eaaad1fda6dcdcd9, type: 3}
       propertyPath: m_text
       value: "\u30B9\u30B3\u30A2\u30DC\u30FC\u30CA\u30B9"
@@ -916,6 +932,10 @@ PrefabInstance:
     - target: {fileID: 1833259487626617654, guid: 1b4be6012749b5044a2e84efa6b8bac8, type: 3}
       propertyPath: m_Offset.y
       value: 1.0554469
+      objectReference: {fileID: 0}
+    - target: {fileID: 5199662865957447057, guid: 1b4be6012749b5044a2e84efa6b8bac8, type: 3}
+      propertyPath: maxHp
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 8184304407101696931, guid: 1b4be6012749b5044a2e84efa6b8bac8, type: 3}
       propertyPath: m_Name
@@ -1953,6 +1973,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 455330065612732217, guid: 1bcc1cf501917a94ebb1cccb1bc03ac0, type: 3}
+      propertyPath: maxHp
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 7841349884693530282, guid: 1bcc1cf501917a94ebb1cccb1bc03ac0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 26.7
@@ -2104,6 +2128,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1022508557273857743, guid: 16a61d4a51eabc64f8729166f27b1447, type: 3}
+      propertyPath: maxHp
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 5655405078004106385, guid: 16a61d4a51eabc64f8729166f27b1447, type: 3}
       propertyPath: m_LocalPosition.x
       value: -31.1
@@ -2157,6 +2185,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2909573582709741325, guid: 344c10a570293214d9b8fb1a9e958806, type: 3}
+      propertyPath: maxHp
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 3416503010484499638, guid: 344c10a570293214d9b8fb1a9e958806, type: 3}
       propertyPath: m_Name
       value: Enemy5(RightSnake)
@@ -2442,6 +2474,10 @@ PrefabInstance:
     - target: {fileID: 272708713445692463, guid: fd95ca72b1be4ab4fb14e88d682f429d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1907081687483839783, guid: fd95ca72b1be4ab4fb14e88d682f429d, type: 3}
+      propertyPath: maxHp
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 7218224524036820350, guid: fd95ca72b1be4ab4fb14e88d682f429d, type: 3}
       propertyPath: m_Name
@@ -2839,6 +2875,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8221059559338334461, guid: 9cf1e6c85a26d544d91f156c8df71e4b, type: 3}
+      propertyPath: maxHp
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2899,6 +2939,10 @@ PrefabInstance:
     - target: {fileID: 721788676681865757, guid: 23e4ef6fe6aa3074fa30d711d8a90a00, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102013686889445854, guid: 23e4ef6fe6aa3074fa30d711d8a90a00, type: 3}
+      propertyPath: maxHp
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3231,6 +3275,10 @@ PrefabInstance:
     - target: {fileID: 1099553750580496013, guid: 0c420d0470f0fa54183fabe34c29ac57, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2659356798920437144, guid: 0c420d0470f0fa54183fabe34c29ac57, type: 3}
+      propertyPath: maxHp
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 2870457472952859681, guid: 0c420d0470f0fa54183fabe34c29ac57, type: 3}
       propertyPath: m_LocalPosition.x
