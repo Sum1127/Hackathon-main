@@ -73,7 +73,7 @@ public class result : MonoBehaviour
         Name[change] = nameInput.name;
         if (string.IsNullOrEmpty(Name[change]))
         {
-            Name[change] = "No Name";
+            Name[change] = "–¼–³‚µ";
         }
         string saveranking = "";
         for (int i = 0; i < 10; i++)
