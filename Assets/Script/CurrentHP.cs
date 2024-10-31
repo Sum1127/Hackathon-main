@@ -20,7 +20,7 @@ public class CurrentHP : MonoBehaviour
         {
             // PlayerHealth‚©‚çŒ»İ‚ÌHP‚ğæ“¾‚µ‚Ä•\¦
             int currentHp = playerHP.GetCurrentHP();
-            _textMeshPro.text = "CurrentHP:" + currentHp.ToString();
+            _textMeshPro.text = "Œ»İ‚ÌHP:" + currentHp.ToString();
         }
     }
 }
