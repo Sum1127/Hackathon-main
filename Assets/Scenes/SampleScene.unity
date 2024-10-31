@@ -679,7 +679,6 @@ MonoBehaviour:
   - {fileID: 8184304407101696931, guid: 1b4be6012749b5044a2e84efa6b8bac8, type: 3}
   - {fileID: 2954328053091192605, guid: 9cf1e6c85a26d544d91f156c8df71e4b, type: 3}
   - {fileID: 8958188754906512624, guid: 1bcc1cf501917a94ebb1cccb1bc03ac0, type: 3}
-  - {fileID: 7218224524036820350, guid: fd95ca72b1be4ab4fb14e88d682f429d, type: 3}
   SpawnTime: 10
   maxObjects: 0
   time: 0
@@ -1866,93 +1865,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1936766514
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3447352488182177970, guid: c76b82c1c91abbc4b9d20c5438e663f8, type: 3}
-      propertyPath: m_Name
-      value: EnemyRandomGenerator (10)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7842191554971802137, guid: c76b82c1c91abbc4b9d20c5438e663f8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.849608
-      objectReference: {fileID: 0}
-    - target: {fileID: 7842191554971802137, guid: c76b82c1c91abbc4b9d20c5438e663f8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.2009435
-      objectReference: {fileID: 0}
-    - target: {fileID: 7842191554971802137, guid: c76b82c1c91abbc4b9d20c5438e663f8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.31685087
-      objectReference: {fileID: 0}
-    - target: {fileID: 7842191554971802137, guid: c76b82c1c91abbc4b9d20c5438e663f8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7842191554971802137, guid: c76b82c1c91abbc4b9d20c5438e663f8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7842191554971802137, guid: c76b82c1c91abbc4b9d20c5438e663f8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7842191554971802137, guid: c76b82c1c91abbc4b9d20c5438e663f8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7842191554971802137, guid: c76b82c1c91abbc4b9d20c5438e663f8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7842191554971802137, guid: c76b82c1c91abbc4b9d20c5438e663f8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7842191554971802137, guid: c76b82c1c91abbc4b9d20c5438e663f8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3447352488182177970, guid: c76b82c1c91abbc4b9d20c5438e663f8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1936766516}
-  m_SourcePrefab: {fileID: 100100000, guid: c76b82c1c91abbc4b9d20c5438e663f8, type: 3}
---- !u!1 &1936766515 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3447352488182177970, guid: c76b82c1c91abbc4b9d20c5438e663f8, type: 3}
-  m_PrefabInstance: {fileID: 1936766514}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1936766516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936766515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fc0b182f88cea94a95cb23f1e8bac18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyList:
-  - {fileID: 3416503010484499638, guid: 344c10a570293214d9b8fb1a9e958806, type: 3}
-  - {fileID: 721788676681865757, guid: 23e4ef6fe6aa3074fa30d711d8a90a00, type: 3}
-  - {fileID: 203159238664605855, guid: 16a61d4a51eabc64f8729166f27b1447, type: 3}
-  - {fileID: 1099553750580496013, guid: 0c420d0470f0fa54183fabe34c29ac57, type: 3}
-  SpawnTime: 14
-  maxObjects: 0
-  time: 0
-  startTime: 0
-  SpawnStarttime: 60
 --- !u!1 &1961271091
 GameObject:
   m_ObjectHideFlags: 0
@@ -3752,7 +3664,6 @@ SceneRoots:
   - {fileID: 6250953710197339217}
   - {fileID: 3183817320673894086}
   - {fileID: 1408383896}
-  - {fileID: 1936766514}
   - {fileID: 1540998951}
   - {fileID: 2358356373179983061}
   - {fileID: 926045910}
