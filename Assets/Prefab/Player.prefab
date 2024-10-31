@@ -625,6 +625,7 @@ MonoBehaviour:
   _bulletPow: 100
   _bombPow: 200
   _bulletSpeed: 40
+  _bombScale: 3
 --- !u!114 &6076073581767258800
 MonoBehaviour:
   m_ObjectHideFlags: 0
